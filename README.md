@@ -38,13 +38,14 @@ pip install numpy matplotlib pandas
 from bubble_chart import BubbleChart, BubbleChartVisualizer
 import pandas as pd
 
-# Sample data
+# Data for major oceans and seas with their approximate surface area in km²
 data = pd.DataFrame({
-    'names': ['Park A', 'Park B', 'Park C'],
-    'areas': [100, 200, 150],
-    'values': [100, 200, 150],
-    'colors': ['#FF5733', '#33FF57', '#3357FF']
+    'names': ['Pacific Ocean', 'Atlantic Ocean', 'Indian Ocean', 'Southern Ocean', 'Arctic Ocean', 
+              'South China Sea', 'Caribbean Sea', 'Mediterranean Sea'],
+    'areas': [168723000, 85133000, 70560000, 21860000, 15558000, 3500000, 2754000, 2500000],
+    'colors': ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f']
 })
+
 
 # Create visualization
 visualizer = BubbleChartVisualizer()
@@ -52,9 +53,9 @@ fig = visualizer.create_bubble_chart(
     data=data,
     areas_column='areas',
     labels_column='names',
-    values_column='values',
+    values_column='areas',
     colors_column='colors',
-    title='National Parks by Area'
+    title='World Oceans and Major Seas by Surface Area'
 )
 plt.show()
 ```
@@ -66,12 +67,12 @@ fig = visualizer.create_bubble_chart(
     data=data,
     areas_column='areas',
     labels_column='names',
-    values_column='values',
+    values_column='areas',
     colors_column='colors',
-    title='Customized Bubble Chart',
+    title='World Oceans and Major Seas by Surface Area',
     figsize=(12, 12),
     bubble_spacing=0.5,
-    save_path='chart.png',
+    save_path='World_Oceans_and_Seas_by_Surface_Area.png',
     dpi=300
 )
 ```
