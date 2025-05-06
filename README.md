@@ -4,6 +4,9 @@
 
 This project provides a Python implementation for creating visually appealing bubble charts with automatic collision detection and layout optimization. The chart is particularly useful for visualizing proportional data where both the size and position of bubbles convey meaningful information.
 
+![Tanzania_National_Parks](outputs/Tanzania_National_Parks.png)
+
+
 ## Features
 
 - **Automatic Layout**: Bubbles are automatically arranged to minimize collisions
